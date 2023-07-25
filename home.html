@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>swim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./resources/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- CDN - W3CSS -->
+    <link rel="stylesheet" href="./resources/w3.css/w3.css">
+    <link rel="stylesheet" href="./resources/simple.css/simple-v1.css">
+
+    <style>
+        * {
+            background: black;
+        }
+
+        body {
+            background: black;
+        }
+
+        #header {
+            margin: auto;
+            min-height: 10px;
+        }
+
+        .content {
+            margin: auto;
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            padding: 5px;
+        }
+
+        .content .w2 {
+            margin: 5px;
+            width: 240px;
+            height: 50px;
+        }
+
+        .content .w3 {
+            margin: 5px;
+            width: 365px;
+            height: 50px;
+        }
+
+        .content select {
+            color: white;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content a {
+            margin: 5px;
+            width: 115px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border: none;
+            overflow: hidden;
+            text-decoration: none;
+            background-color: gray;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        #clock_1,
+        #clock_2 {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+
+    </div>
+
+
+    <div class="content">
+
+        <div class="w2">
+            <div id="clock_1"></div>
+            <div id="clock_2"></div>
+        </div>
+
+        <div class="w2" style="border: 1px solid cyan;">
+            <div id="latitude"></div>
+            <div id="longitude"></div>
+        </div>
+
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://m.naver.com">
+            네이버
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://m.daum.net">
+            다음
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://m.comic.naver.com/webtoon/weekday.nhn">
+            네이버웹툰
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://webtoon.kakao.com/">
+            카카오웹툰
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://m.auction.co.kr">
+            옥션
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://m.pay.naver.com">
+            네이버페이
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://m.shopping.naver.com/home/m/index.nhn">
+            네이버쇼핑
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="http://m.danawa.com/index.html">
+            다나와
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="http://mshop.danawa.com/mobile/?controller=estimateMain&methods=index&marketPlaceSeq=16"
+            class="w3-button">
+            컴 견적
+        </a>
+        <!-- ------------------------------------------------------------- -->
+<!--        <a href="https://m.clien.net/service/">-->
+<!--            클리앙-->
+<!--        </a>-->
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://domains.google.com/registrar/swsw1005.com/dns?hl=ko">
+            구글도메인
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://dcc.godaddy.com/control/dns">
+            goDaddy
+        </a>
+
+        <!-- ------------------------------------------------------------- -->
+        <div id=ipLocation">
+
+        </div>
+
+        <!-- ------------------------------------------------------------- -->
+        <div class="w3">
+            <select title="demos" onchange="gotopage(this)" name="demos">
+                <option value="">-------</option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://test.comtrue.com:7575/ekyc">
+                    https://test.comtrue.com:7575/ekyc
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://ai.comtrue.com/kt">
+                    https://ai.comtrue.com/kt
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://ai.comtrue.com/skt">
+                    https://ai.comtrue.com/skt
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://ai.comtrue.com/verity-test">
+                    https://ai.comtrue.com/verity-test
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://simpl.info/imagecapture/">
+                    https://simpl.info/imagecapture/
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://simpl.info/getusermedia/constraints/">
+                    https://simpl.info/getusermedia/constraints/
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://simpl.info/getusermedia/">
+                    https://simpl.info/getusermedia/
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://comtrue.com:8200/hidpi">
+                    https://comtrue.com:8200/hidpi
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://comtrue.com:8200/hidpi/api.html">
+                    https://comtrue.com:8200/hidpi/api.html
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://comtrue.com:8200/hidpi/aiteam.html">
+                    https://comtrue.com:8200/hidpi/aiteam.html
+                </option>
+                <!-- ------------------------------------------------------------- -->
+                <option value="https://test.comtrue.com:7000/demo/">
+                    https://test.comtrue.com:7000/demo/
+                </option>
+                <!-- ------------------------------------------------------------- -->
+
+
+
+            </select>
+        </div>
+
+
+    </div>
+
+
+    <div class="content">
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://grafana.swsw1005.com/">
+            그라파나
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://lunchapi.swsw1005.com/swagger-ui.html">
+            점심API doc
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://admin.swsw1005.com">
+            관리자 페이지
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://router.swsw1005.com">
+            swim router
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://comtrue-util.swsw1005.com/cafe-fairy">
+            컴트루 까페요정
+        </a>
+        <!-- ------------------------------------------------------------- -->
+        <a href="https://bustable.swsw1005.com/bus-table">
+            버스 시간표
+        </a>
+        <!-- ------------------------------------------------------------- -->
+
+    </div>
+
+
+
+    <div class="content">
+        <div class="w3-row-padding">
+
+            <form action="./download.jsp" method="post">
+
+                <div class="w3-col s4 m3 l1 w3-center" style="color: yellow;">
+                    <span>name</span>
+                </div>
+
+                <div class="w3-col s6 m3">
+                    <input type="text" name="name" style="width: 95%; color: yellow;">
+                </div>
+
+                <div class="w3-hide-large w3-hide-medium s4">
+
+                </div>
+
+
+                <div class="w3-col s4 m3 l1 w3-center" style="color: yellow;">
+                    <span>version</span>
+                </div>
+
+                <div class="w3-col s6 m3">
+                    <input type="text" name="version" style="width: 95%; color: yellow;">
+                </div>
+
+                <div class="w3-col s4 m2 w3-center w3-margin-bottom">
+                    <button>다운로드</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+
+        const clock_1 = document.getElementById("clock_1");
+        const clock_2 = document.getElementById("clock_2");
+
+        function showClock() {
+
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var today = new Date();
+
+            var clock_1_text = today.toLocaleDateString("ko-kr", options);
+            var clock_2_text = today.toLocaleTimeString();
+
+            clock_1.innerText = clock_1_text;
+            clock_2.innerText = clock_2_text;
+
+        }
+
+        function interval() {
+            setInterval(() => {
+                showClock();
+            }, 500);
+        }
+
+        interval();
+
+
+
+        function dbBackup(url) {
+            $.ajax({
+                type: "get",
+                url: url,
+                //dateType : "json",
+                //contentType : "application/json; charset=utf-8",
+                data: {
+
+                }
+                ,
+                success: function (result, status, xhr) {
+                },
+                error: function (data) {
+                }
+            });
+        }
+
+
+        function getIpGoogle() {
+            $.ajax({
+                type: "get",
+                url: "https://domains.google.com/checkip",
+                data: {
+
+                }
+                ,
+                success: function (result, status, xhr) {
+                    console.log(result);
+                },
+                error: function (error, data) {
+                    console.log(error, error.statusText);
+                }
+            });
+        }
+
+        function getIpInfo() {
+            $.ajax({
+                type: "get",
+                url: "https://ipinfo.io/json?token=73a0a75ab981fb",
+                data: {
+
+                }
+                ,
+                success: function (result, status, xhr) {
+                    console.log(result);
+                },
+                error: function (error, data) {
+                    console.log(error, error.statusText);
+                }
+            });
+        }
+
+        function gotopage(this_) {
+            if (this_.value.length > 5) {
+                location.href = this_.value;
+            }
+        }
+
+        setTimeout(() => {
+            getIpInfo();
+        }, 555);
+        setTimeout(() => {
+            getIpGoogle();
+        }, 555);
+    </script>
+
+
+</body>
+
+</html>
